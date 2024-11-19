@@ -1,8 +1,7 @@
 public class Cacifo
 {
     protected boolean disponibilidade;
-    int nCacifo;
-    int codigo;
-    
-    
+    private int ncacifo;
+    private String tipo; 
+    private int password;
 }
