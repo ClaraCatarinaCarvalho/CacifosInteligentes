@@ -1,7 +1,7 @@
 #BlueJ class context
-comment0.target=Cacifo
+comment0.target=cacifo
 comment1.params=tipo\ numero
-comment1.target=Cacifo(java.lang.String,\ int)
+comment1.target=cacifo(java.lang.String,\ int)
 comment2.params=pagamento
 comment2.target=boolean\ alugar(boolean)
 comment3.params=codigoSeguranca

@@ -1,3 +1,5 @@
 #BlueJ class context
-comment0.target=CacifoArmazenamento
-numComments=1
+comment0.target=cacifoArmazenamento
+comment1.params=numero
+comment1.target=cacifoArmazenamento(int)
+numComments=2

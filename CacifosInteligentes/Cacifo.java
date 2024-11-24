@@ -1,13 +1,13 @@
 import java.util.Random;
 
-public class Cacifo {
+public class cacifo {
     protected String tipo;
     protected int numero;
     protected boolean ocupado;
     protected Integer codigoSeguranca;
     protected long tempoExpiracao;
 
-    public Cacifo(String tipo, int numero) {
+    public cacifo(String tipo, int numero) {
         this.tipo = tipo;
         this.numero = numero;
         this.ocupado = false;
@@ -66,7 +66,7 @@ public class Cacifo {
 
     public void exibirInformacoes() {
         if (ocupado) {
-            System.out.println("Cacifo " + numero + " está ocupado. Código: " + codigoSeguranca);
+            System.out.println("Cacifo " + numero + " está ocupado.");
         } else {
             System.out.println("Cacifo " + numero + " está livre.");
         }
