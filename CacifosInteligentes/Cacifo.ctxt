@@ -2,10 +2,12 @@
 comment0.target=Cacifo
 comment1.params=tipo\ numero
 comment1.target=Cacifo(java.lang.String,\ int)
-comment2.params=
-comment2.target=boolean\ alugar()
+comment2.params=pagamento
+comment2.target=boolean\ alugar(boolean)
 comment3.params=codigoSeguranca
 comment3.target=boolean\ livre(int)
 comment4.params=
-comment4.target=boolean\ isocupado()
-numComments=5
+comment4.target=boolean\ verificarDisponibilidade()
+comment5.params=
+comment5.target=void\ exibirInformacoes()
+numComments=6
