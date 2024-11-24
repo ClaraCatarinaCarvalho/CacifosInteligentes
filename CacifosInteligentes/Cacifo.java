@@ -4,4 +4,11 @@ public class Cacifo
     private int ncacifo;
     private String tipo; 
     private int password;
+    
+ public Cacifo(int numero) {
+        this.ncacifo = numero;
+        
+        
+    }
+
 }
