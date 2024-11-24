@@ -1,76 +1,67 @@
-import java.util.Random;
+ import java.time.LocalDateTime;
 
-public class cacifo {
-    protected String tipo;
-    protected int numero;
-    protected boolean ocupado;
-    protected Integer codigoSeguranca;
-    protected long tempoExpiracao;
-
-    public cacifo(String tipo, int numero) {
-        this.tipo = tipo;
-        this.numero = numero;
-        this.ocupado = false;
-        this.codigoSeguranca = null;
-        this.tempoExpiracao = 0;
-    }
-
-    public boolean alugar(boolean pagamento) {
-        
-        //Pagar e disponibilidade
-        if (!pagamento) {
-            System.out.println("O pagamento falhou");
-            return false;
-        }
-
-        if (ocupado) {
-            System.out.println("Cacifo " + numero + " já está ocupado.");
-            return false;
-        }
-
-        Random rand = new Random();
-        this.codigoSeguranca = 1000 + rand.nextInt(9000);
-        this.ocupado = true;
-        this.tempoExpiracao = System.currentTimeMillis() + 86400000;
-
-        System.out.println("Cacifo " + numero + " alugado com sucesso!");
-        System.out.println("Número do cacifo: " + numero);
-        System.out.println("Código de segurança: " + this.codigoSeguranca);
-        return true;
-    }
-
-    public boolean livre(int codigoSeguranca) {
-        if (!ocupado || !this.codigoSeguranca.equals(codigoSeguranca)) {
-            System.out.println("Código inválido ou cacifo não ocupado.");
-            return false;
-        }
-
-        this.ocupado = false;
-        this.codigoSeguranca = null;
-        this.tempoExpiracao = 0;
-        //O cacifo foi livre com sucesso
-        System.out.println("Cacifo " + numero + " livre com sucesso!");
-        return true;
+public abstract class Cacifo
+{
+    public int num = 0;
+    private boolean disponibilidade;
+    public static LocalDateTime dataFimAluguel;
+    public static int CODIGO;
+    
+    public Cacifo(int num){
+        this.num = num;
+        this.disponibilidade = true;
     }
     
-    //Se o tempo acabar
-    public boolean verificarDisponibilidade() {
-        if (ocupado && System.currentTimeMillis() > tempoExpiracao) {
-            //Retorna o tempo atual em milissegundos 
-            this.ocupado = false;
-            this.codigoSeguranca = null;
-            this.tempoExpiracao = 0;
+    public static int codigoAleatorio(){
+        CODIGO = 1000 + (int)(Math.random() * 8999);
+        return CODIGO;
+    }
+    
+    public void inserirCodigo(int codigoTentativa){
+        if(codigoTentativa == CODIGO){
+            if(disponibilidade == false){
+                System.out.println("O cacifo já está aberto");
+            } else {
+                System.out.println("O cacifo foi aberto!");
+                this.disponibilidade = false;
+            }   
+        } else {
+            System.out.println("Código incorreto.");
         }
-        return !ocupado;
+    }
+    
+    public LocalDateTime getDataFimAluguel(){
+        return this.dataFimAluguel;
     }
 
-    public void exibirInformacoes() {
-        if (ocupado) {
-            System.out.println("Cacifo " + numero + " está ocupado.");
-        } else {
-            System.out.println("Cacifo " + numero + " está livre.");
-        }
+    public int getNum(){
+        return this.num;
     }
+    
+    public boolean consultarCacifo(){
+          return this.disponibilidade;
+    }
+    
+    public void setDataFimAluguel(LocalDateTime dataFimAluguel){
+        this.dataFimAluguel = dataFimAluguel;
+    }
+    
+    public void setDisponibilidade(boolean disponibilidade){
+        this.disponibilidade = disponibilidade;
+    }
+    
+    public void desbloquearCacifo(){
+        this.disponibilidade = true;
+        CODIGO = 0;
+        this.dataFimAluguel = null;
+    }
+    
+    public abstract void informacoes();
+
+    public abstract void iniciarCarregamento(int codigo, boolean pagamento);
+
+    public abstract void terminarCarregamento(boolean pagamento);
 }
+    
 
     
