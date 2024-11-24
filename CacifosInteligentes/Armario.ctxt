@@ -1,13 +1,13 @@
 #BlueJ class context
-comment0.target=armario
+comment0.target=Armario
 comment1.params=
-comment1.target=armario()
+comment1.target=void\ gestao()
 comment2.params=
 comment2.target=void\ verificarDisponibilidade()
 comment3.params=numero\ pagamentoConfirmado
 comment3.target=void\ alugarCacifo(int,\ boolean)
 comment4.params=numero\ codigoSeguranca
-comment4.target=void\ libertarCacifo(int,\ int)
+comment4.target=void\ liberarCacifo(int,\ int)
 comment5.params=numero
 comment5.target=void\ exibirInformacoes(int)
 numComments=6
