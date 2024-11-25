@@ -20,9 +20,11 @@ public abstract class Cacifo
     
     public void inserirCodigo(int codigoTentativa){
         if(codigoTentativa == CODIGO){
+            //Se o cacifo não tiver sido alugado 
             if(disponibilidade == false){
                 System.out.println("O cacifo está disponivel");
             } else {
+            //se o cacifo estiver ocupado, fica disponivel
                 System.out.println("O cacifo ficou disponivel");
                 this.disponibilidade = false;
             }   

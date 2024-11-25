@@ -51,7 +51,6 @@ public class Armario
                     System.out.println("O cacifo foi alugado com sucesso.\n" +" Código: " + codigoCarregamento + "\nNúmero do cacifo: " + cacifos[i].getNum());
                 }
             }
-        
             System.out.println("Nenhum cacifo disponivel");
         }
         return null;
