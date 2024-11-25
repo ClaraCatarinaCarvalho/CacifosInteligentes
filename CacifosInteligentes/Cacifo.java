@@ -1,5 +1,5 @@
 import java.time.LocalDateTime;
- import java.util.Random;
+import java.util.Random;
 public abstract class Cacifo
 {
     public int num = 0;

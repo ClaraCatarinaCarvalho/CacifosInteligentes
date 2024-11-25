@@ -1,5 +1,4 @@
 import java.time.LocalDateTime;
-
 public class Armario
 {
     private static final int ARMARIO = 50;
@@ -14,10 +13,10 @@ public class Armario
 
     private void contruirCacifos(){
         for (int i = 0; i < 10; i++) {
-            cacifos[i] = new CacifoCarregamento(i + 2,50);
+            cacifos[i] = new CacifoCarregamento(i + 7,50);
         }
         for (int i = 10; i < ARMARIO; i++) {
-            cacifos[i] = new CacifoArmazenamento(i + 3,20);
+            cacifos[i] = new CacifoArmazenamento(i + 5,20);
         }
     }
         
@@ -36,7 +35,6 @@ public class Armario
         
             System.out.println("Nenhum cacifo disponivel");
         }
-        //Sinalizar que o método não conseguiu realizar o aluguel do cacifo
         return null;
     }
     

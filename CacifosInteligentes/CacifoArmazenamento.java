@@ -5,7 +5,7 @@ public class CacifoArmazenamento extends Cacifo
     
     public CacifoArmazenamento(int num, double custoPorDia){
         super(num);
-        this.custoDiario = custoPorDia;
+        this.custoDiario = custoDiario;
     }
     
     @Override
