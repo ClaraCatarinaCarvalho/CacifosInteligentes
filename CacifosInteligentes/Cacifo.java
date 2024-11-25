@@ -1,4 +1,4 @@
- import java.time.LocalDateTime;
+import java.time.LocalDateTime;
  import java.util.Random;
 public abstract class Cacifo
 {
@@ -60,6 +60,3 @@ public abstract class Cacifo
 
     public abstract void iniciarCarregamento(int codigo, boolean pagamento);
 }
-    
-
-    
