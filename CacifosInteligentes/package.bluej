@@ -1,4 +1,5 @@
 #BlueJ package file
+<<<<<<< HEAD
 dependency1.from=armario
 dependency1.to=cacifo
 dependency1.type=UsesDependency
@@ -18,6 +19,33 @@ package.frame.height=736
 package.frame.width=1382
 package.numDependencies=1
 package.numTargets=6
+=======
+dependency1.from=Armario
+dependency1.to=Cacifo
+dependency1.type=UsesDependency
+dependency2.from=Armario
+dependency2.to=CacifoArmazenamento
+dependency2.type=UsesDependency
+dependency3.from=cacifoTeste
+dependency3.to=Armario
+dependency3.type=UsesDependency
+editor.fx.0.height=739
+editor.fx.0.width=816
+editor.fx.0.x=246
+editor.fx.0.y=111
+objectbench.height=93
+objectbench.width=760
+package.divider.horizontal=0.6
+package.divider.vertical=0.8
+package.editor.height=393
+package.editor.width=638
+package.editor.x=382
+package.editor.y=124
+package.frame.height=600
+package.frame.width=800
+package.numDependencies=3
+package.numTargets=5
+>>>>>>> f020ae5a059f7a8de1a95caafa388daa19b577c5
 package.showExtends=true
 package.showUses=true
 project.charset=UTF-8
@@ -27,15 +55,25 @@ readme.width=49
 readme.x=10
 readme.y=10
 target1.height=70
+<<<<<<< HEAD
 target1.name=armario
 target1.showInterface=false
 target1.type=ClassTarget
 target1.width=120
 target1.x=210
 target1.y=90
+=======
+target1.name=CacifoArmazenamento
+target1.showInterface=false
+target1.type=ClassTarget
+target1.width=200
+target1.x=120
+target1.y=270
+>>>>>>> f020ae5a059f7a8de1a95caafa388daa19b577c5
 target2.height=70
-target2.name=CacifoArmazenamento
+target2.name=Cacifo
 target2.showInterface=false
+<<<<<<< HEAD
 target2.type=ClassTarget
 target2.width=170
 target2.x=510
@@ -46,12 +84,25 @@ target3.showInterface=false
 target3.type=ClassTarget
 target3.width=120
 target3.x=450
+=======
+target2.type=AbstractTarget
+target2.width=120
+target2.x=260
+target2.y=140
+target3.height=70
+target3.name=Armario
+target3.showInterface=false
+target3.type=ClassTarget
+target3.width=120
+target3.x=150
+>>>>>>> f020ae5a059f7a8de1a95caafa388daa19b577c5
 target3.y=10
 target4.height=70
 target4.name=cacifoTeste
 target4.showInterface=false
 target4.type=ClassTarget
 target4.width=120
+<<<<<<< HEAD
 target4.x=150
 target4.y=10
 target5.height=70
@@ -68,3 +119,14 @@ target6.type=ClassTarget
 target6.width=150
 target6.x=350
 target6.y=320
+=======
+target4.x=10
+target4.y=120
+target5.height=70
+target5.name=CacifoTelemovel
+target5.showInterface=false
+target5.type=ClassTarget
+target5.width=150
+target5.x=350
+target5.y=270
+>>>>>>> f020ae5a059f7a8de1a95caafa388daa19b577c5

@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=armario
+comment1.params=
+comment1.target=armario()
+comment2.params=
+comment2.target=void\ contruirCacifos()
+comment3.params=pagamento
+comment3.target=cacifo\ alugarCacifoArmazenamento(boolean)
+comment4.params=pagamento
+comment4.target=cacifo\ alugarCacifoCarregamento(boolean)
+numComments=5
