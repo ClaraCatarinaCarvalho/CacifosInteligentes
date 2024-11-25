@@ -59,6 +59,8 @@ public abstract class Cacifo
     }
     
     public abstract void informacoes();
+    public abstract void iniciarPagamento(int codigo, boolean pagamento);
+    
 
-    public abstract void iniciarCarregamento(int codigo, boolean pagamento);
+   
 }

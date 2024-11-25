@@ -13,7 +13,7 @@ public class CacifoCarregamento extends Cacifo
     }
     
     @Override
-    public void iniciarCarregamento(int codigo, boolean autorizacaoPagamento){
+    public void iniciarPagamento(int codigo, boolean autorizacaoPagamento){
         if (!verificarCacifo()) {
             System.out.println("Lamento, o Cacifo já está ocupado");
         } else if (this.CODIGO == codigo) {
