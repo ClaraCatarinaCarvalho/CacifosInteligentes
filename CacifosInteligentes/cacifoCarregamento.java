@@ -1,13 +1,13 @@
 import java.time.LocalDateTime;
 import java.time.Duration;
 
-public class cacifoCarregamento extends cacifo
+public class CacifoCarregamento extends Cacifo
 {
     private boolean disponibilidade;
     private LocalDateTime inicioCarregamento;
     private double custoMinutos;
 
-    public cacifoCarregamento(int num, double custoMinutos){
+    public CacifoCarregamento(int num, double custoMinutos){
         super(num);
         this.inicioCarregamento = null;
         this.custoMinutos = custoMinutos;

@@ -1,13 +1,13 @@
  import java.time.LocalDateTime;
  import java.util.Random;
-public abstract class cacifo
+public abstract class Cacifo
 {
     public int num = 0;
     private boolean disponibilidade;
     public static LocalDateTime dataFimAluguel;
     public static int CODIGO;
     
-    public cacifo(int num){
+    public Cacifo(int num){
         this.num = num;
         this.disponibilidade = true;
     }
