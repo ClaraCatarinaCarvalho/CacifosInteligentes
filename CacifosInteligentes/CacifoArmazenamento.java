@@ -14,8 +14,5 @@ public class CacifoArmazenamento extends Cacifo
     }
     
     
-    @Override
-    public void iniciarPagamento(int codigo, boolean pagamento) {
-    }
-
+   
 }

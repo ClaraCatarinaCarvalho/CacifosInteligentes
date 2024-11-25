@@ -1,25 +1,25 @@
 import java.time.LocalDateTime;
 import java.util.Random;
-public abstract class Cacifo
+public abstract class Cacifo //para nao instanciar para poder criar subclasses
 {
     public int num = 0;
     private boolean disponibilidade;
     public static LocalDateTime dataFimAluguel;
-    public static int CODIGO;
+    public static int codigo;
     
     public Cacifo(int num){
         this.num = num;
         this.disponibilidade = true;
     }
     
-     public static int codigo() {
+    public static int codigo() {
         Random random = new Random();
         return 1000 + random.nextInt(9000); // Gera um número entre 1000 e 9999
     }
 
     
     public void inserirCodigo(int codigoTentativa){
-        if(codigoTentativa == CODIGO){
+        if(codigoTentativa == codigo){
             //Se o cacifo não tiver sido alugado 
             if(disponibilidade == false){
                 System.out.println("O cacifo está disponivel");
@@ -59,7 +59,8 @@ public abstract class Cacifo
     }
     
     public abstract void informacoes();
-    public abstract void iniciarPagamento(int codigo, boolean pagamento);
+    
+    
     
 
    
