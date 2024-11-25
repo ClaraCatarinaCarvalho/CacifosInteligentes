@@ -1,32 +1,33 @@
  import java.time.LocalDateTime;
-
-public abstract class Cacifo
+ import java.util.Random;
+public abstract class cacifo
 {
     public int num = 0;
     private boolean disponibilidade;
     public static LocalDateTime dataFimAluguel;
     public static int CODIGO;
     
-    public Cacifo(int num){
+    public cacifo(int num){
         this.num = num;
         this.disponibilidade = true;
     }
     
-    public static int codigoAleatorio(){
-        CODIGO = 1000 + (int)(Math.random() * 8999);
-        return CODIGO;
+     public static int codigo() {
+        Random random = new Random();
+        return 1000 + random.nextInt(9000); // Gera um número entre 1000 e 9999
     }
+
     
     public void inserirCodigo(int codigoTentativa){
         if(codigoTentativa == CODIGO){
             if(disponibilidade == false){
-                System.out.println("O cacifo já está aberto");
+                System.out.println("O cacifo está disponivel");
             } else {
-                System.out.println("O cacifo foi aberto!");
+                System.out.println("O cacifo ficou disponivel");
                 this.disponibilidade = false;
             }   
         } else {
-            System.out.println("Código incorreto.");
+            System.out.println("Código incorreto");
         }
     }
     
@@ -38,7 +39,7 @@ public abstract class Cacifo
         return this.num;
     }
     
-    public boolean consultarCacifo(){
+    public boolean verificarCacifo(){
           return this.disponibilidade;
     }
     
@@ -50,17 +51,14 @@ public abstract class Cacifo
         this.disponibilidade = disponibilidade;
     }
     
-    public void desbloquearCacifo(){
+    public void abirCacifo(){
         this.disponibilidade = true;
-        CODIGO = 0;
         this.dataFimAluguel = null;
     }
     
     public abstract void informacoes();
 
     public abstract void iniciarCarregamento(int codigo, boolean pagamento);
-
-    public abstract void terminarCarregamento(boolean pagamento);
 }
     
 

@@ -1,11 +1,11 @@
-public class CacifoArmazenamento extends Cacifo
+public class cacifoArmazenamento extends cacifo
 {
     private boolean disponibilidade;
-    double custoPorDia;
+    double custoDiario;
     
-    public CacifoArmazenamento(int num, double custoPorDia){
+    public cacifoArmazenamento(int num, double custoPorDia){
         super(num);
-        this.custoPorDia = custoPorDia;
+        this.custoDiario = custoPorDia;
     }
     
     @Override
@@ -17,7 +17,5 @@ public class CacifoArmazenamento extends Cacifo
     public void iniciarCarregamento(int codigo, boolean pagamento) {
     }
 
-    @Override
-    public void terminarCarregamento(boolean pagamento) {
-    }
+   
 }
