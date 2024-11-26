@@ -4,6 +4,4 @@ comment1.params=num\ custoPorDia
 comment1.target=CacifoArmazenamento(int,\ double)
 comment2.params=
 comment2.target=void\ informacoes()
-comment3.params=codigo\ pagamento
-comment3.target=void\ iniciarPagamento(int,\ boolean)
-numComments=4
+numComments=3

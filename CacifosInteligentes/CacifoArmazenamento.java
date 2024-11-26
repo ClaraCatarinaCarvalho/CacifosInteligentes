@@ -3,6 +3,7 @@ public class CacifoArmazenamento extends Cacifo {
 
     public CacifoArmazenamento(int num, double custoPorDia) {
         super(num);
+<<<<<<< HEAD
         this.custoDiario = custoPorDia;
     }
 
@@ -21,3 +22,16 @@ public class CacifoArmazenamento extends Cacifo {
         }
     }
 }
+=======
+        this.custoDiario = custoDiario;
+    }
+    
+    @Override
+    public void informacoes(){
+        System.out.println("Cacifo Armazenamento\n" + "Disponibilidade: " + disponibilidade+ "\nNúmero do cacifo: " + this.num);
+    }
+    
+    
+   
+}
+>>>>>>> 52f6a28ebc8554e5b33b36d84fe822f5085d1dc4

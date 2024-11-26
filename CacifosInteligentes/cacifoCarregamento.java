@@ -9,12 +9,21 @@ public class CacifoCarregamento extends Cacifo {
         this.inicioCarregamento = null;
         this.custoMinutos = custoMinutos;
     }
+<<<<<<< HEAD
 
     @Override
     public void iniciarPagamento(int codigo, boolean autorizacaoPagamento) {
         if (!verificarCacifo()) {
             System.out.println("Lamento, o Cacifo já está ocupado.");
         } else if (this.CODIGO == codigo) {
+=======
+    
+    
+    public void iniciarPagamento(int codigo, boolean autorizacaoPagamento){
+        if (!verificarCacifo()) {
+            System.out.println("Lamento, o Cacifo já está ocupado");
+        } else if (this.codigo == codigo) {
+>>>>>>> 52f6a28ebc8554e5b33b36d84fe822f5085d1dc4
             System.out.println("Custo por minuto: " + this.custoMinutos);
             if (!autorizacaoPagamento) {
                 System.out.println("Não foi possível efetuar o seu pagamento.");

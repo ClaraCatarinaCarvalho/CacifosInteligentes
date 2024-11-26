@@ -4,10 +4,13 @@ comment1.params=num
 comment1.target=Cacifo(int)
 comment10.params=
 comment10.target=void\ informacoes()
+<<<<<<< HEAD
 comment11.params=codigo\ pagamento
 comment11.target=void\ iniciarPagamento(int,\ boolean)
 comment12.params=codigo\ pagamento
 comment12.target=void\ alugar(int,\ boolean)
+=======
+>>>>>>> 52f6a28ebc8554e5b33b36d84fe822f5085d1dc4
 comment2.params=
 comment2.target=int\ codigo()
 comment3.params=codigoTentativa
@@ -23,5 +26,10 @@ comment7.target=void\ setDataInicioAluguel(java.time.LocalDateTime)
 comment8.params=disponibilidade
 comment8.target=void\ setDisponibilidade(boolean)
 comment9.params=
+<<<<<<< HEAD
 comment9.target=void\ abrirCacifo()
 numComments=13
+=======
+comment9.target=void\ abirCacifo()
+numComments=11
+>>>>>>> 52f6a28ebc8554e5b33b36d84fe822f5085d1dc4

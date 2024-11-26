@@ -1,13 +1,13 @@
 import java.time.LocalDateTime;
 public class Armario
 {
-    private static final int ARMARIO = 50;
+    private static final int armario = 50;
     public int codigo;
     private static Cacifo[] cacifos;
     private LocalDateTime inicioAluguel;
     
     public Armario(){
-        this.cacifos = new Cacifo[ARMARIO];
+        this.cacifos = new Cacifo[armario];
         this.contruirCacifos();
     }
 
@@ -15,7 +15,7 @@ public class Armario
         for (int i = 0; i < 10; i++) {
             cacifos[i] = new CacifoCarregamento(i + 7,50);
         }
-        for (int i = 10; i < ARMARIO; i++) {
+        for (int i = 10; i < armario; i++) {
             cacifos[i] = new CacifoArmazenamento(i + 5,20);
         }
     }
@@ -43,7 +43,7 @@ public class Armario
         if (!pagamento) {
             System.out.println("Houve um erro no pagamento");
         } else {
-            for (int i = 40; i < ARMARIO; i++) { 
+            for (int i = 40; i < armario; i++) { 
                 if (cacifos[i].verificarCacifo()) { // Verificar disponibilidade
                     int codigoCarregamento = Cacifo.codigo();
                     this.inicioAluguel = LocalDateTime.now();
