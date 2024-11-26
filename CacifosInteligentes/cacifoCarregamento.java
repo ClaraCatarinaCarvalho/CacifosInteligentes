@@ -1,38 +1,36 @@
 import java.time.LocalDateTime;
-import java.time.Duration;
 
-public class cacifoCarregamento extends cacifo
-{
-    private boolean disponibilidade;
+public class CacifoCarregamento extends Cacifo {
     private LocalDateTime inicioCarregamento;
     private double custoMinutos;
 
-    public cacifoCarregamento(int num, double custoMinutos){
+    public CacifoCarregamento(int num, double custoMinutos) {
         super(num);
         this.inicioCarregamento = null;
         this.custoMinutos = custoMinutos;
     }
-    
+
     @Override
-    public void iniciarCarregamento(int codigo, boolean autorizacaoPagamento){
+    public void iniciarPagamento(int codigo, boolean autorizacaoPagamento) {
         if (!verificarCacifo()) {
-            System.out.println("Lamento, o Cacifo já está ocupado");
+            System.out.println("Lamento, o Cacifo já está ocupado.");
         } else if (this.CODIGO == codigo) {
             System.out.println("Custo por minuto: " + this.custoMinutos);
             if (!autorizacaoPagamento) {
-                System.out.println("Não foi possivel efetuar o seu pagamento");
+                System.out.println("Não foi possível efetuar o seu pagamento.");
+            } else {
+                this.inicioCarregamento = LocalDateTime.now();
+                System.out.println("O carregamento foi iniciado no cacifo: " + this.getNum());
+                this.setDisponibilidade(false);
+                this.cacifoAberto = false;  
             }
-            this.inicioCarregamento = LocalDateTime.now();
-            System.out.println("O carregamento foi iniciado no cacifo: " + this.getNum());
-            this.disponibilidade = false;
         } else {
-            System.out.println("O código que inseriu não é válido");
+            System.out.println("O código que inseriu não é válido.");
         }
     }
 
-    
     @Override
-    public void informacoes(){
-        System.out.println("Cacifo de carregamento\n Disponibilidade" + disponibilidade + "\nNúmero do cacifo: " + this.num);
-    }    
+    public void informacoes() {
+        System.out.println("Cacifo de Carregamento\nDisponibilidade: " + (verificarCacifo() ? "Disponível" : "Ocupado") + "\nNúmero do Cacifo: " + this.getNum());
+    }
 }
