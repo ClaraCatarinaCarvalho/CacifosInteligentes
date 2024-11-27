@@ -4,7 +4,7 @@ import java.util.Random;
 public abstract class Cacifo {
     public int num = 0;
     private boolean disponibilidade;
-    public static LocalDateTime dataInicioAluguel;  
+    public static LocalDateTime dataInicioAluguer;  
     public static int CODIGO;
     public boolean cacifoAberto;  
 
@@ -34,8 +34,8 @@ public abstract class Cacifo {
         }
     }
 
-    public LocalDateTime getDataInicioAluguel() {
-        return this.dataInicioAluguel;
+    public LocalDateTime getDataInicioAluguer() {
+        return this.dataInicioAluguer;
     }
 
     public int getNum() {
@@ -46,8 +46,8 @@ public abstract class Cacifo {
         return this.disponibilidade;
     }
 
-    public void setDataInicioAluguel(LocalDateTime dataInicioAluguel) {
-        this.dataInicioAluguel = dataInicioAluguel;
+    public void setDataInicioAluguer(LocalDateTime dataInicioAluguer) {
+        this.dataInicioAluguer = dataInicioAluguer;
     }
 
     public void setDisponibilidade(boolean disponibilidade) {
@@ -56,7 +56,7 @@ public abstract class Cacifo {
 
     public void abrirCacifo() {
         this.disponibilidade = true;
-        this.dataInicioAluguel = null;
+        this.dataInicioAluguer = null;
         this.cacifoAberto = true;
     }
 
@@ -66,7 +66,7 @@ public abstract class Cacifo {
    
     public void alugar(int codigo, boolean pagamento) {
         if (this.verificarCacifo()) {
-            this.setDataInicioAluguel(LocalDateTime.now());
+            this.setDataInicioAluguer(LocalDateTime.now());
             System.out.println("Cacifo alugado com sucesso.\nCódigo: " + codigo + "\nNúmero do Cacifo: " + this.getNum());
             this.setDisponibilidade(false);
             this.cacifoAberto = false;

@@ -1,10 +1,11 @@
 import java.time.LocalDateTime;
+import java.time.LocalDateTime;
 public class Armario
 {
     private static final int ARMARIO = 50;
     public int codigo;
     private static Cacifo[] cacifos;
-    private LocalDateTime inicioAluguel;
+    private LocalDateTime inicioAluguer;
     
     public Armario(){
         this.cacifos = new Cacifo[ARMARIO];
@@ -28,7 +29,7 @@ public class Armario
             for (int i = 10; i < 40; i++) { 
                 if (cacifos[i].verificarCacifo()) {
                     int codigoArmazenamento = Cacifo.codigo();
-                    this.inicioAluguel = LocalDateTime.now();//LocalDateTime.now() usa o horário do sistema
+                    this.inicioAluguer = LocalDateTime.now();//LocalDateTime.now() usa o horário do sistema
                     System.out.println("O cacifo foi alugado com sucesso.\n " + "Código: " + codigoArmazenamento + "\nNúmero do cacifo: " + cacifos[i].getNum());
                 }
             }
@@ -46,7 +47,7 @@ public class Armario
             for (int i = 40; i < ARMARIO; i++) { 
                 if (cacifos[i].verificarCacifo()) { // Verificar disponibilidade
                     int codigoCarregamento = Cacifo.codigo();
-                    this.inicioAluguel = LocalDateTime.now();
+                    this.inicioAluguer = LocalDateTime.now();
                     cacifos[i].setDisponibilidade(false);
                     System.out.println("O cacifo foi alugado com sucesso.\n" +" Código: " + codigoCarregamento + "\nNúmero do cacifo: " + cacifos[i].getNum());
                 }
