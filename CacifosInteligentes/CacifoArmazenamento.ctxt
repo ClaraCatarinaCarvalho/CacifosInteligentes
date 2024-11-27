@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=CacifoArmazenamento
-comment1.params=num\ custoPorDia
+comment1.params=num\ custoDiario
 comment1.target=CacifoArmazenamento(int,\ double)
 comment2.params=
 comment2.target=void\ informacoes()

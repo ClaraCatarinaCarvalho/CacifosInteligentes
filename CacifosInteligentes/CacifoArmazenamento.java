@@ -3,7 +3,7 @@ public class CacifoArmazenamento extends Cacifo
     private boolean disponibilidade;
     double custoDiario;
     
-    public CacifoArmazenamento(int num, double custoPorDia){
+    public CacifoArmazenamento(int num, double custoDiario){
         super(num);
         this.custoDiario = custoDiario;
     }
