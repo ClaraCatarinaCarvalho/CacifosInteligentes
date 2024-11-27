@@ -1,67 +1,77 @@
 import java.time.LocalDateTime;
 import java.util.Random;
-public abstract class Cacifo //para nao instanciar para poder criar subclasses
-{
+
+public abstract class Cacifo {
     public int num = 0;
     private boolean disponibilidade;
-    public static LocalDateTime dataFimAluguel;
-    public static int codigo;
-    
-    public Cacifo(int num){
+    public static LocalDateTime dataInicioAluguel;  
+    public static int CODIGO;
+    public boolean cacifoAberto;  
+
+    public Cacifo(int num) {
         this.num = num;
         this.disponibilidade = true;
+        this.cacifoAberto = true; // Inicialmente o cacifo está aberto
     }
-    
+
     public static int codigo() {
         Random random = new Random();
         return 1000 + random.nextInt(9000); // Gera um número entre 1000 e 9999
     }
 
-    
-    public void inserirCodigo(int codigoTentativa){
-        if(codigoTentativa == codigo){
-            //Se o cacifo não tiver sido alugado 
-            if(disponibilidade == false){
-                System.out.println("O cacifo está disponivel");
+    public void inserirCodigo(int codigoTentativa) {
+        if (codigoTentativa == CODIGO) {
+            // Se o cacifo não tiver sido alugado
+            if (disponibilidade == false) {
+                System.out.println("O cacifo está disponível.");
             } else {
-            //se o cacifo estiver ocupado, fica disponivel
-                System.out.println("O cacifo ficou disponivel");
+                // Se o cacifo estiver ocupado, fica disponível
+                System.out.println("O cacifo ficou disponível.");
                 this.disponibilidade = false;
-            }   
+            }
         } else {
             System.out.println("Código incorreto");
         }
     }
-    
-    public LocalDateTime getDataFimAluguel(){
-        return this.dataFimAluguel;
+
+    public LocalDateTime getDataInicioAluguel() {
+        return this.dataInicioAluguel;
     }
 
-    public int getNum(){
+    public int getNum() {
         return this.num;
     }
-    
-    public boolean verificarCacifo(){
-          return this.disponibilidade;
+
+    public boolean verificarCacifo() {
+        return this.disponibilidade;
     }
-    
-    public void setDataFimAluguel(LocalDateTime dataFimAluguel){
-        this.dataFimAluguel = dataFimAluguel;
+
+    public void setDataInicioAluguel(LocalDateTime dataInicioAluguel) {
+        this.dataInicioAluguel = dataInicioAluguel;
     }
-    
-    public void setDisponibilidade(boolean disponibilidade){
+
+    public void setDisponibilidade(boolean disponibilidade) {
         this.disponibilidade = disponibilidade;
     }
-    
-    public void abirCacifo(){
+
+    public void abrirCacifo() {
         this.disponibilidade = true;
-        this.dataFimAluguel = null;
+        this.dataInicioAluguel = null;
+        this.cacifoAberto = true;
     }
-    
+
     public abstract void informacoes();
-    
-    
-    
+    public abstract void iniciarPagamento(int codigo, boolean pagamento);
 
    
+    public void alugar(int codigo, boolean pagamento) {
+        if (this.verificarCacifo()) {
+            this.setDataInicioAluguel(LocalDateTime.now());
+            System.out.println("Cacifo alugado com sucesso.\nCódigo: " + codigo + "\nNúmero do Cacifo: " + this.getNum());
+            this.setDisponibilidade(false);
+            this.cacifoAberto = false;
+        } else {
+            System.out.println("Cacifo já está ocupado.");
+        }
+    }
 }
